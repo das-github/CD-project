@@ -1,4 +1,4 @@
-FROM centos:7
+FROM centos:latest
 MAINTAINER dasgrasshopper@gmail.com
 RUN yum -y update
 RUN yum -y install httpd httpd-tools \
