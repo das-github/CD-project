@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample123
+spec:
+  selector:
+    matchLabels:
+      app: sample123
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: sample123
+  spec:
+    containers:
+     - name: sample123
+       image: dockerdaas/sample1
+       ports: 
+       - containerPort: 80
