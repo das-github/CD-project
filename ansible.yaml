@@ -1,0 +1,25 @@
+- hosts: all
+  become: true
+
+  tasks:
+  - name: copy deployment file to kubernetes master
+    copy:
+	    src: deployment.yml
+	    dest: /opt/
+
+  - name: copy service file to kubernetes master
+    copy:
+    	src: service.yml
+    	dest: /opt/
+
+  - name: delete the previous k8s file
+    command: kubectl delete -f /opt/deployment.yml
+
+  - name: delete the previous k8s file
+    command: kubectl delete -f /opt/deployment.yml
+
+  - name: create new deployment
+    command: kubectl apply -f /opt/deployment.yml
+
+  - name: create new service
+    command: kubectl apply -f /opt/service.yml
