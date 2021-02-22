@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sample123
+  labels:
+    app: sample123
+spec:
+  selector:
+    app: sample123
+  type: LoadBalancer
+  ports:
+   -  protocol: TCP
+      port: 8080
+      targetPort: 31200
