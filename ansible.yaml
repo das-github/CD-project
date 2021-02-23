@@ -8,8 +8,8 @@
       dest: /opt/
   - name: copy service file to kubernetes master
     copy:
-    	src: service.yaml
-  	dest: /opt/
+      src: service.yaml
+      dest: /opt/
   - name: delete the previous k8s file
     command: kubectl delete -f /opt/deployment.yaml
   - name: delete the previous k8s file
