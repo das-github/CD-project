@@ -1,5 +1,8 @@
 FROM ubuntu:latest
-RUN apt-get update 
+RUN mkdir -p /etc/apt  
+COPY apt.conf /etc/apt`
+RUN apt-get update && \ 
+  apt-get -y install`
 RUN apt-get install –y apache2 
 RUN apt-get install –y apache2-utils 
 RUN apt-get clean \
