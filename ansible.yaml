@@ -4,8 +4,8 @@
   tasks:
   - name: copy deployment file to kubernetes master
     copy:
-	src: deployment.yaml
-	dest: /opt/
+      src: deployment.yaml
+      dest: /opt/
   - name: copy service file to kubernetes master
     copy:
     	src: service.yaml
