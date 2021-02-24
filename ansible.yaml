@@ -12,8 +12,6 @@
       dest: /opt/
   - name: delete the previous k8s file
     command: kubectl delete -f /opt/deployment.yaml
-  - name: delete the previous k8s file
-    command: kubectl delete -f /opt/deployment.yaml
   - name: create new deployment
     command: kubectl apply -f /opt/deployment.yaml
   - name: create new service
