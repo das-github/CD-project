@@ -11,9 +11,9 @@ spec:
     metadata:
       labels:
         app: sample123
-  spec:
-    containers:
-     - name: sample123
-       image: dockerdaas/sample1
-       ports: 
-       - containerPort: 80
+    spec:
+      containers:
+        - name: sample123
+          image: dockerdaas/sample1
+          ports: 
+            - containerPort: 80
